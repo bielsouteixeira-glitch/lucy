@@ -1,0 +1,20 @@
+[build]
+  # Swaps in the static-export Next.js config before building so the
+  # Netlify build always produces a fully static site in ./out, with all
+  # files from /public (logo, photos, videos, posters) included as-is.
+  # This removes the need for any manual next.config.ts edit.
+  command = "cp next.config.export.ts next.config.ts && npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
