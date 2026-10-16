@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
+import { DOG01, DOG02, PORTRAIT, ADDITIONAL } from "@/generated/inline-images";
 
 const images = [
-  { src: "/assets/images/lucy-with-dog-01.jpg", label: "Cuidado com carinho", tall: true },
-  { src: "/assets/images/lucy-portrait.jpg", label: "Lucy Corrêa" },
-  { src: "/assets/images/lucy-additional.jpg", label: "Atendimento acolhedor", tall: true },
-  { src: "/assets/images/lucy-with-dog-02.jpg", label: "Momentos de carinho" },
+  { src: DOG01, label: "Cuidado com carinho", tall: true },
+  { src: PORTRAIT, label: "Lucy Corrêa" },
+  { src: ADDITIONAL, label: "Atendimento acolhedor", tall: true },
+  { src: DOG02, label: "Momentos de carinho" },
 ];
 
 export default function Gallery() {

@@ -3,6 +3,7 @@ import Gallery from "@/components/Gallery";
 import VideoSection from "@/components/VideoSection";
 import Hours from "@/components/Hours";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import InlineImg from "@/components/InlineImg";
 
 function wpp(text: string) {
   return `https://api.whatsapp.com/send?phone=5511911879750&text=${encodeURIComponent(text)}`;
@@ -56,9 +57,9 @@ export default function Page() {
 
               <div className="mt-8 flex items-center gap-6">
                 <div className="flex -space-x-3">
-                  <img src="/assets/images/lucy-portrait.jpg" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
-                  <img src="/assets/images/lucy-with-dog-01.jpg" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
-                  <img src="/assets/images/lucy-with-dog-02.jpg" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
+                  <InlineImg id="portraitThumb" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
+                  <InlineImg id="dog01Thumb" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
+                  <InlineImg id="dog02Thumb" className="w-9 h-9 rounded-full border-2 border-white object-cover" alt="" />
                   <div className="w-9 h-9 rounded-full bg-[#C2185B] border-2 border-white grid place-items-center text-white text-xs font-bold">+cuidado</div>
                 </div>
                 <p className="text-sm text-[#6B6570] leading-tight">Atendimento<br /><span className="font-semibold text-[#1E1A1E]">presencial e online</span></p>
@@ -71,9 +72,9 @@ export default function Page() {
                 <div className="absolute -inset-3 bg-gradient-to-br from-[#FCE4EC] to-[#F8BBD0]/40 rounded-[36px] blur-[1px] hidden lg:block" />
                 <div className="relative bg-white p-2 lg:p-3 rounded-[32px] shadow-[0_24px_64px_rgba(194,24,91,0.15)] border border-[#FCE4EC] rotate-[0.6deg]">
                   <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] lg:aspect-[4/5.2] bg-[#FFF0F5]">
-                    <img src="/assets/images/lucy-with-dog-01.jpg" alt="Lucy Corrêa com cachorro — atendimento com carinho" className="w-full h-full object-cover object-[center_20%]" />
+                    <InlineImg id="dog01" alt="Lucy Corrêa com cachorro — atendimento com carinho" className="w-full h-full object-cover object-[center_20%]" />
                     <div className="absolute bottom-3 left-3 right-3 bg-white/92 backdrop-blur-xl rounded-2xl p-4 shadow-lg border border-white flex items-center gap-3">
-                      <img src="/assets/logo/logo-original.jpg" alt="" className="w-10 h-10 rounded-full object-cover border border-[#FCE4EC]" />
+                      <InlineImg id="logo" alt="" className="w-10 h-10 rounded-full object-cover border border-[#FCE4EC]" />
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-bold tracking-widest text-[#C2185B]">LU CORRÊA ANIMAL CARE</p>
                         <p className="text-sm font-medium text-[#1E1A1E] -mt-0.5">Cuidado e carinho em cada atendimento</p>
@@ -224,11 +225,11 @@ export default function Page() {
               <div className="absolute -top-4 -left-4 w-full h-full bg-[#FFF0F5] rounded-[28px] hidden lg:block" />
               <div className="relative grid grid-cols-[1.2fr_0.8fr] gap-4">
                 <div className="rounded-[24px] overflow-hidden aspect-[3/4] bg-[#FFF0F5] border border-[#FCE4EC]">
-                  <img src="/assets/images/lucy-portrait.jpg" alt="Lucy Corrêa — Lu Corrêa Animal Care" className="w-full h-full object-cover object-top" />
+                  <InlineImg id="portrait" alt="Lucy Corrêa — Lu Corrêa Animal Care" className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="space-y-4">
                   <div className="rounded-[20px] overflow-hidden aspect-square bg-[#FFF0F5] border border-[#FCE4EC]">
-                    <img src="/assets/images/lucy-with-dog-02.jpg" alt="Lucy com pet" className="w-full h-full object-cover" />
+                    <InlineImg id="dog02" alt="Lucy com pet" className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-[#C2185B] rounded-[20px] p-5 text-white">
                     <p className="text-3xl font-bold leading-none">♥</p>
@@ -238,7 +239,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="absolute -bottom-4 -right-2 bg-white rounded-2xl px-4 py-3 shadow-xl border border-[#FCE4EC] hidden lg:flex items-center gap-3">
-                <img src="/assets/logo/logo-original.jpg" className="w-8 h-8 rounded-full object-cover" alt="" />
+                <InlineImg id="logo" className="w-8 h-8 rounded-full object-cover" alt="" />
                 <span className="text-xs font-bold tracking-widest text-[#C2185B]">LUCY CORRÊA</span>
               </div>
             </div>
@@ -379,7 +380,7 @@ export default function Page() {
 
               <div className="bg-white rounded-[24px] p-6 lg:p-7 text-[#1E1A1E] shadow-xl">
                 <div className="flex items-center gap-3">
-                  <img src="/assets/logo/logo-original.jpg" className="w-10 h-10 rounded-full object-cover border border-[#FCE4EC]" alt="" />
+                  <InlineImg id="logo" className="w-10 h-10 rounded-full object-cover border border-[#FCE4EC]" alt="" />
                   <div>
                     <p className="text-xs font-bold tracking-widest text-[#C2185B]">LU CORRÊA ANIMAL CARE</p>
                     <p className="text-sm font-semibold -mt-1">Lucy Corrêa</p>
@@ -436,7 +437,7 @@ export default function Page() {
           <div className="grid lg:grid-cols-[1.2fr_0.8fr_0.8fr] gap-10">
             <div>
               <div className="flex items-center gap-3">
-                <img src="/assets/logo/logo-original.jpg" alt="Lu Corrêa Animal Care" className="w-11 h-11 rounded-2xl object-cover border border-[#FCE4EC]" />
+                <InlineImg id="logo" alt="Lu Corrêa Animal Care" className="w-11 h-11 rounded-2xl object-cover border border-[#FCE4EC]" />
                 <div>
                   <p className="text-xs font-bold tracking-[0.14em] text-[#C2185B]">LU CORRÊA</p>
                   <p className="font-[Cormorant_Garamond] text-lg font-semibold -mt-1">Animal Care</p>

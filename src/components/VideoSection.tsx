@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import { DOG01, PORTRAIT } from "@/generated/inline-images";
 
 export default function VideoSection() {
   const v1 = useRef<HTMLVideoElement>(null);
@@ -15,7 +16,7 @@ export default function VideoSection() {
           <video
             ref={v1}
             src="/assets/videos/atendimento.mp4"
-            poster="/assets/posters/atendimento-poster.jpg"
+            poster={DOG01}
             controls
             playsInline
             preload="metadata"
@@ -45,7 +46,7 @@ export default function VideoSection() {
           <video
             ref={v2}
             src="/assets/videos/vacina.mp4"
-            poster="/assets/posters/vacina-poster.jpg"
+            poster={PORTRAIT}
             controls
             playsInline
             preload="metadata"

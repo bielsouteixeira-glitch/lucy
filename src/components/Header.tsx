@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { LOGO } from "@/generated/inline-images";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5511911879750&text=Oi%20vim%20do%20Instagram";
 
@@ -30,7 +31,7 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 h-[84px] flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3 group">
           <div className="w-11 h-11 rounded-2xl overflow-hidden bg-white shadow-[0_4px_16px_rgba(194,24,91,0.15)] border border-[#FCE4EC] flex items-center justify-center group-hover:shadow-[0_8px_24px_rgba(194,24,91,0.2)] transition-all">
-            <img src="/assets/logo/logo-original.jpg" alt="Lu Corrêa Animal Care" className="w-full h-full object-cover" />
+            <img src={LOGO} alt="Lu Corrêa Animal Care" className="w-full h-full object-cover" />
           </div>
           <div className="hidden sm:block leading-none">
             <p className="font-[Plus_Jakarta_Sans] font-bold text-[13px] tracking-[0.14em] text-[#C2185B]">LU CORRÊA</p>
